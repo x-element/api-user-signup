@@ -1,0 +1,8 @@
+{
+  "name": "api-user-signup",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0",
+    "api-model-create": "x-element/api-model-create",
+    "api-user-login": "x-element/api-user-login"
+  }
+}
