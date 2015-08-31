@@ -5,13 +5,13 @@
   <template>
 
     <api-model-create id="create"
-      path="{{path}}"
+      collection="{{collection}}"
       data="{{credentials}}"
       on-response="on_create">
     </api-model-create>
 
     <api-user-login id="login"
-      path="{{path}}"
+      collection="{{collection}}"
       credentials="{{credentials}}"
       response="{{user}}"
       on-login="on_login">
@@ -25,7 +25,7 @@
     is: 'api-user-signup',
 
     properties: {
-      path: {
+      collection: {
         type: String,
         value: 'Users'
       },
