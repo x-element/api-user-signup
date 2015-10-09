@@ -14,7 +14,8 @@
       collection="{{collection}}"
       credentials="{{credentials}}"
       response="{{user}}"
-      on-response="on_login">
+      on-response="on_response"
+      on-error="on_error">
     </api-user-login>
 
   </template>
@@ -51,10 +52,15 @@
       this.$.login.send();
     },
 
-    on_login: function (event) {
+    on_response: function (event) {
       event.stopPropagation();
-      this.fire('signup', this.user);
+      this.fire('response', this.user);
+    },
+    
+    on_error: function (event) {
+      event.stopPropagation();
+      this.fire('error', this.error);
     }
-
+    
   });
 </script>
